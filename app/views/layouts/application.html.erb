@@ -14,10 +14,12 @@
     <%= link_to "Click here to Sign out", signout_path, id: "sign_out" %></center>
   <% else %>
   <center>  <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></center>
+    
   <% end %>
-</div>
-<center><img src="<%= @image %>"/></center>
-<%= yield %>
 
+</div>
+<%= yield %>
+<center><h2><font color="red"> Profile Picture <br></font></2><img src="<%= @image %>"/></center>
+  
 </body>
 </html>
