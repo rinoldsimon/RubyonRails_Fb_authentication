@@ -7,14 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1 align ="center"><font color="red">//Facebook Authentication using Ruby On Rails4//</font> </h1>
 <div id="user_nav">
   <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <center>  Signed in as <strong><%= current_user.name %></strong>!<br>
+    <%= link_to "Click here to Sign out", signout_path, id: "sign_out" %></center>
   <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+  <center>  <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></center>
   <% end %>
 </div>
+<center><img src="<%= @image %>"/></center>
 <%= yield %>
 
 </body>
