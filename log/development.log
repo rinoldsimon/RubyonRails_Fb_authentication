@@ -6022,3 +6022,60 @@ Started GET "/" for 127.0.0.1 at 2014-05-14 01:21:55 +0530
 Processing by HomeController#show as HTML
   Rendered home/show.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook/" for 127.0.0.1 at 2014-05-14 12:59:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDpp-dsd-NeOxezbe2pxSI7Qm5mVuL0rbKmQcKh-uUii28YmFoNPKZ0Dy15vasLmAk-7pX9bVLk6ALXLopRmbqlIsm8AJEe834kUQ8QrS6QJw4G_RZ_dE7MDh9YOm-iJmZb89cXHL_AmktlIUaNGCfBNh0Tsx_ioGZcZ-ouKvoyuHuIobhsxtx71fZSL5yCh3DF8Cj_gZE3EdESMTsIenNJq-KWrKmZlyxNrQKSO-5ly91Un3V6K4Dd_6sK4d1cmyvkQbc3xdVONZQaflnHsbFcynbuADu_O9pdlJZJp92t6zTbcNCFlfFXxFv44rUE22s&state=8f0f48150cf066dffeae9178068c0b7d904c6bce11d29b68" for 127.0.0.1 at 2014-05-14 12:59:21 +0530
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDpp-dsd-NeOxezbe2pxSI7Qm5mVuL0rbKmQcKh-uUii28YmFoNPKZ0Dy15vasLmAk-7pX9bVLk6ALXLopRmbqlIsm8AJEe834kUQ8QrS6QJw4G_RZ_dE7MDh9YOm-iJmZb89cXHL_AmktlIUaNGCfBNh0Tsx_ioGZcZ-ouKvoyuHuIobhsxtx71fZSL5yCh3DF8Cj_gZE3EdESMTsIenNJq-KWrKmZlyxNrQKSO-5ly91Un3V6K4Dd_6sK4d1cmyvkQbc3xdVONZQaflnHsbFcynbuADu_O9pdlJZJp92t6zTbcNCFlfFXxFv44rUE22s", "state"=>"8f0f48150cf066dffeae9178068c0b7d904c6bce11d29b68", "provider"=>"facebook"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '683598448378154'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "oauth_expires_at" = ?, "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["oauth_expires_at", "2014-07-12 15:27:47.000000"], ["oauth_token", "CAAUhy2Mm8jMBAOSQ9U1KAp6mRQddciuoBHrczUoPnsFFfZBGZADvjmd2QOEZCPM0wL37JXFgcHYmS3kxaHvPFKIYtoucl8faZAxheZAZAiCTLxhQ7wFyiEuT2fxbdgJLZAW2ZCbFZArz3xgK32rk9oqmgTpk14PZB78ZCWCYKlSE1OATWQNHZCwbXctZB"], ["updated_at", "2014-05-14 07:29:25.495974"]]
+  [1m[36m (103.1ms)[0m  [1mcommit transaction[0m
+  Rendered sessions/create.html.erb within layouts/application (24.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1672ms (Views: 196.1ms | ActiveRecord: 104.1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-05-14 12:59:25 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-14 12:59:25 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 12:59:25 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:26 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:26 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 12:59:26 +0530
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-05-14 12:59:30 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-14 12:59:30 +0530
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
