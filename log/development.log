@@ -6079,3 +6079,8 @@ Started GET "/" for 127.0.0.1 at 2014-05-14 12:59:30 +0530
 Processing by HomeController#show as HTML
   Rendered home/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook/" for 127.0.0.1 at 2014-05-14 13:54:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+(facebook) Request phase initiated.
