@@ -1,5 +1,5 @@
-> Step:1 add the gems in your gemfile
-> Step:2 define your root url
+* Step:1 add the gems in your gemfile
+* Step:2 define your root url
 > Step:3 create user model “user.rb” 
 > Step:4 run the migrate command to insert the User table in your database.
 > Step:5 create an app in facebook to get “App-ID” and “App Secret”
