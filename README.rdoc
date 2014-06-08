@@ -7,5 +7,5 @@
 * Step:7 create a new controller named as “sessions_controller.rb”.Add the following method in it.
 
 
-# HEROKU
+== HEROKU
 http://fb-authentication.herokuapp.com
